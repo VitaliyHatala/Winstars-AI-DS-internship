@@ -60,6 +60,7 @@ Example:
 
 "There is a dog in the picture"
 → detected entity: dog
+
 2. Image Classification
 
 A Convolutional Neural Network (CNN) is trained to classify animal images from a dataset containing 10 animal classes.
