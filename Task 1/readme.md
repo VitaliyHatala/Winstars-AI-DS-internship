@@ -1,8 +1,7 @@
 # Task 1 — MNIST Image Classification (OOP)
-Overview
 
-This task implements three different machine learning models for classifying handwritten digits from the MNIST dataset.
-The goal is to design a flexible and extensible classification system using Object-Oriented Programming (OOP) principles.
+## This task implements three different machine learning models for classifying handwritten digits from the MNIST dataset.
+### The goal is to design a flexible and extensible classification system using Object-Oriented Programming (OOP) principles.
 
 The implemented models are:
 
@@ -18,7 +17,7 @@ Architecture
 
 The solution is built using an interface-based design.
 
-1. MnistClassifierInterface
+1. ### MnistClassifierInterface
 
 An abstract interface that defines the required methods for all models.
 
@@ -29,7 +28,7 @@ predict()
 
 All classifiers must implement this interface.
 
-2. Model Implementations
+2. ### Model Implementations
 
 Three models implement the interface:
 
@@ -45,7 +44,7 @@ ConvolutionalNeuralNetwork
 
 A CNN model that extracts spatial features from images using convolutional layers.
 
-3. MnistClassifier (Wrapper Class)
+3. ### MnistClassifier (Wrapper Class)
 
 The MnistClassifier class acts as a unified entry point.
 
