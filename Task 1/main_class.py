@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class MnistClassifierInterface(ABC):
 
     @abstractmethod
