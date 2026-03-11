@@ -1,1 +1,74 @@
+# Task 1 — MNIST Image Classification (OOP)
+Overview
 
+This task implements three different machine learning models for classifying handwritten digits from the MNIST dataset.
+The goal is to design a flexible and extensible classification system using Object-Oriented Programming (OOP) principles.
+
+The implemented models are:
+
+Random Forest
+
+Feed-Forward Neural Network (NN)
+
+Convolutional Neural Network (CNN)
+
+Each model follows a common interface so that the classifier can be easily switched without changing the rest of the code.
+
+Architecture
+
+The solution is built using an interface-based design.
+
+1. MnistClassifierInterface
+
+An abstract interface that defines the required methods for all models.
+
+Required methods:
+
+train()
+predict()
+
+All classifiers must implement this interface.
+
+2. Model Implementations
+
+Three models implement the interface:
+
+RandomForestClassifier
+
+Machine learning model based on an ensemble of decision trees.
+
+FeedForwardNeuralNetwork
+
+A fully connected neural network for image classification.
+
+ConvolutionalNeuralNetwork
+
+A CNN model that extracts spatial features from images using convolutional layers.
+
+3. MnistClassifier (Wrapper Class)
+
+The MnistClassifier class acts as a unified entry point.
+
+It takes the algorithm name as an input parameter:
+
+cnn
+rf
+nn
+
+Example:
+
+classifier = MnistClassifier(algorithm="cnn")
+classifier.train(X_train, y_train)
+predictions = classifier.predict(X_test)
+
+This design ensures that the input/output structure remains identical regardless of the selected model.
+
+Dataset
+
+The project uses the MNIST dataset, which contains:
+
+70,000 grayscale images
+
+Image size: 28 × 28 pixels
+
+10 classes representing digits 0-9
